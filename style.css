@@ -23,7 +23,6 @@ p {
 
 section {
   padding: 20px;
-  flex-direction: column;
 }
 
 section.alternate-background {
@@ -31,13 +30,8 @@ section.alternate-background {
   color: #fff;
 }
 
-img {
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-}
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -45,7 +39,6 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .item {
@@ -57,11 +50,6 @@ main img {
   flex: 2;
 }
 
-.img-resize {
-  flex-direction: column;
-  width: 100%;
-  margin-bottom: 30px;
-}
 /* -------  Navigation ------- */
 
 header {
@@ -72,8 +60,14 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 50px;
   color: #fff;
+  padding: 15px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
 }
 
 header nav {
@@ -83,11 +77,11 @@ header nav {
 
 header nav ul {
   display: flex;
-  padding-left: 0;
 }
 
 header nav ul li {
   list-style-type: none;
+
 }
 
 header nav ul li a {
@@ -103,25 +97,27 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  flex-wrap: wrap;
   border: 2px solid #ff385c;
-  padding: 20px;
-}
-
-form > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding: 10px;
 }
 
 form label {
   font-weight: bold;
-  justify-content: flex-start;
+  font-size: 18px;
+  padding-bottom: 5px;
+
 }
 
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 200px;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
 form button {
@@ -146,61 +142,45 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
 
-@media all and (min-width: 600px) {
+  .item {
+    flex: 1;
+  }
+  
+
   header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0;
   }
 
-  form label {
-    display: flex;
-    padding-right: 10px;
-  }
-
-  form > div {
-    display:flex;
-    flex-direction: column;
-    display: inline-flex;
-    justify-content: space-between;
-  }
-
-  form button {
-    width: 100px;
-    display: inline-flex;
-    justify-content: flex-end;
-    margin-left: 100px;
-  }
-
-  .alternate-background h2 {
-    display: flex;
-    justify-content: center;
+  header nav ul {
     align-items: center;
   }
 
-  .column {
-    flex: 35%;
-    margin: 15px;
-  }
-
-  .column p {
-    width: 100%;
-  }
-
-  .row {
+  form {
     display: flex;
+    align-items: center;
+    justify-content: center;  
   }
 
-  #ideas .row {
-    display: flex;
+  form select,
+  form input {
+    margin-bottom: 0px;
   }
 
-  #host .column {
-    display: inline-block
+  form button {
+    flex: 1;
   }
 
-  #host h2 {
-    margin-top: 100px;
+  form div {
+    flex-direction: column;
   }
+
 }
