@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  width: 100%;
 }
 
 h2 {
@@ -23,7 +24,6 @@ p {
 
 section {
   padding: 20px;
-  flex-direction: column;
 }
 
 section.alternate-background {
@@ -38,6 +38,7 @@ img {
 }
 main img {
   width: 100px;
+  height: auto;
 }
 
 /* ---  Groups & Items --- */
@@ -72,7 +73,7 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 50px;
   color: #fff;
 }
 
@@ -102,26 +103,27 @@ header nav ul li a:hover {
 }
 
 /* -------  Search Form ------- */
+
+
 form {
   border: 2px solid #ff385c;
-  padding: 20px;
-}
-
-form > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding: 10px;
 }
 
 form label {
   font-weight: bold;
-  justify-content: flex-start;
 }
 
 form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 form button {
@@ -147,13 +149,73 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 480px) {
   header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
+  header nav {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 30px;
+    justify-content: center;
+  }
+}
+
+
+/* FORM */
+@media all and (min-width: 1200px) {
+  .form-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .space-between {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+  }
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* ABOUT */
+@media all and (min-width: 750px) {
+  .col {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .padding {
+    margin: 10px;
+  }
+}
+
+/* rule for Ideas section */
+
+@media all and (min-width: 750px) {
+  .picture-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .col2 {
+    flex: 1 0 calc(35% - 20px);
+    margin: 5px;
+  }
+  .padding {
+    margin: 10px;
+  }
+}
+
+
+/* 
   form label {
     display: flex;
     padding-right: 10px;
@@ -203,4 +265,4 @@ footer p {
   #host h2 {
     margin-top: 100px;
   }
-}
+} */

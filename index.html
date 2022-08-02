@@ -36,60 +36,64 @@
         <h2>Find the perfect vacation rental</h2>
         <!-- Create a form here -->
         <form>
-          <div>
-            <label for="location">Location:</label>
-            <input
-              id="location"
-              type="text"
-              placeholder="Search destination"
-              required
-            />
-          </div>
-          <div>
-            <label for="arrive">Arrive:</label>
-            <input id="arrive" type="date" required />
-          </div>
-          <div>
-            <label for="depart">Depart:</label>
-            <input id="depart" type="date" required />
-          </div>
-          <div>
-            <label for="type">Type:</label>
-            <select name="type" size="1">
-              <option value="apartment">Apartment</option>
-              <option value="barn">Barn</option>
-              <option value="castle">Castle</option>
-              <option value="houseboat">Houseboat</option>
-              <option value="tiny-house">Tiny House</option>
-              <option value="yacht">Yacht</option>
-              <option value="yurt">Yurt</option>
-            </select>
-          </div>
-          <div>
-            <button type="search">Search</button>
+          <div class="form-container">
+            <div class="item space-between">
+              <label for="location">Location:</label>
+              <input
+                id="location"
+                type="text"
+                placeholder="Search destination"
+                required
+              />
+            </div>
+            <div class="item space-between">
+              <label for="arrive">Arrive:</label>
+              <input id="arrive" type="date" required />
+            </div>
+            <div class="item space-between">
+              <label for="depart">Depart:</label>
+              <input id="depart" type="date" required />
+            </div>
+            <div class="item space-between">
+              <label for="type">Type:</label>
+              <select name="type" size="1">
+                <option value="apartment">Apartment</option>
+                <option value="barn">Barn</option>
+                <option value="castle">Castle</option>
+                <option value="houseboat">Houseboat</option>
+                <option value="tiny-house">Tiny House</option>
+                <option value="yacht">Yacht</option>
+                <option value="yurt">Yurt</option>
+              </select>
+            </div>
+            <div class="item">
+              <div class="button-container">
+                <button type="submit">Search</button>
+              </div>
+            </div>
           </div>
         </form>
       </section>
 
       <!-- About -->
       <section id="about" class="alternate-background">
-        <h2>About</h2>
-        <div class="row">
-          <div class="column">
+        <h2><b>About</b></h2>
+        <div class="group col">
+          <div class="item padding">
             <img
               class="img-resize"
               src="images/vacation-rental-pool.png"
               alt="Thinkfulbnb - Vacation rental pool"
             />
           </div>
-          <div class="column">
+          <div class="item padding">
             <img
               class="img-resize"
               src="images/vacation-rental-inside-stone.png"
               alt="Thinkfulbnb - Vacation rental inside stone"
             />
           </div>
-          <div class="column">
+          <div class="item-double padding">
             <p>
               Fusce porta odio nunc, eget pretium massa rutrum sit amet. Etiam
               fringilla aliquam dapibus. Maecenas quis nisi sed turpis aliquam
@@ -103,15 +107,17 @@
 
       <!-- Ideas -->
       <section id="ideas">
-        <h2>Ideas</h2>
-        <div class="row">
-          <div class="column">
+        <h2><b>Ideas</b></h2>
+        <div class="picture-grid">
+          <div class="item col2">
             <h3>Forest retreats</h3>
             <img
               class="img-resize"
               src="images/forest-retreat.png"
               alt="Thinkfulbnb - Forest retreat"
             />
+          </div>
+          <div class="item col2">
             <h3>Beaches</h3>
             <img
               class="img-resize"
@@ -119,14 +125,15 @@
               alt="Thinkfulbnb - Beach house"
             />
           </div>
-          <div class="column">
+          <div class="item col2">
             <h3>Rustic cabins</h3>
             <img
               class="img-resize"
               src="images/cabin.png"
               alt="Thinkfulbnb - Cabin"
             />
-
+          </div>
+          <div class="item col2">
             <h3>Pet-friendly</h3>
             <img
               class="img-resize"
@@ -139,9 +146,9 @@
 
       <!-- Host -->
       <section id="host" class="alternate-background">
-        <div class="row">
-          <div class="column">
-        <h2>Want to Become a Thinkfulbnb Host?</h2>               
+        <div class="group col">
+          <div class="item">
+            <h2>Want to Become a Thinkfulbnb Host?</h2>               
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               molestie in est id efficitur. Sed hendrerit ut turpis quis
@@ -162,7 +169,7 @@
               </li>
             </ul>
           </div>
-          <div class="column">
+          <div class="item">
             <img
               class="img-resize"
               src="images/become-a-host.png"
